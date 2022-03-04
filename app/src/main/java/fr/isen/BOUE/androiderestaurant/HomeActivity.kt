@@ -5,30 +5,32 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.content.Intent
+import android.util.Log
+import fr.isen.BOUE.androiderestaurant.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-        var button1 = findViewById<Button>(R.id.button1)
-        var button2 = findViewById<Button>(R.id.button2)
-        var button3 = findViewById<Button>(R.id.button3)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         val intent = Intent(this, CategoryActivity::class.java)
-        button1.setOnClickListener(){
+        binding.starters.setOnClickListener(){
             val myToast = Toast.makeText(applicationContext,"Entrees",Toast.LENGTH_SHORT)
             myToast.show()
             intent.putExtra("Category","Entrees");
             startActivity(intent)
         }
 
-        button2.setOnClickListener(){
+        binding.dishes.setOnClickListener(){
             val myToast = Toast.makeText(applicationContext,"Plats",Toast.LENGTH_SHORT)
             myToast.show()
             intent.putExtra("Category","Plats");
             startActivity(intent)
         }
 
-        button3.setOnClickListener(){
+        binding.deserts.setOnClickListener(){
             val myToast = Toast.makeText(applicationContext,"Desserts",Toast.LENGTH_SHORT)
             myToast.show()
             intent.putExtra("Category","Desserts");
@@ -36,4 +38,8 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("HomeActivity", "Activity destroyed")
+    }
 }

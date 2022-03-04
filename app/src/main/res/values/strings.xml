@@ -4,4 +4,27 @@
     <string name="entr_es">Entrées</string>
     <string name="desserts">Desserts</string>
     <string name="plats">Plats</string>
+    <string name="new_activity">New Activity</string>
+
+    <string-array name="starters_array">
+        <item>Salade caesar</item>
+        <item>Un saucisson</item>
+        <item>Un oeuf</item>
+        <item>oui</item>
+    </string-array>
+
+    <string-array name="dishes_array">
+        <item>Steak haché + pâtes</item>
+        <item>Tacos 3 viandes (viandes haché kebab tenders) gratiné sauce blanche harissa suplément cheddar</item>
+        <item>Une feuille de salade</item>
+        <item>non</item>
+    </string-array>
+
+    <string-array name="deserts_array">
+        <item>Un snickers</item>
+        <item>Une pomme</item>
+        <item>Une sucette</item>
+        <item>non</item>
+    </string-array>
+
 </resources>
