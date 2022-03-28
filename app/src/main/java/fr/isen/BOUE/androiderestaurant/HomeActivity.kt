@@ -17,9 +17,9 @@ class HomeActivity : AppCompatActivity() {
         setContentView(view)
         val intent = Intent(this, CategoryActivity::class.java)
         binding.starters.setOnClickListener(){
-            val myToast = Toast.makeText(applicationContext,"Entrees",Toast.LENGTH_SHORT)
+            val myToast = Toast.makeText(applicationContext,"Entrées",Toast.LENGTH_SHORT)
             myToast.show()
-            intent.putExtra("Category","Entrees");
+            intent.putExtra("Category","Entrées");
             startActivity(intent)
         }
 

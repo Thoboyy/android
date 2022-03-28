@@ -9,6 +9,9 @@
     <color name="rouge">#8A0808</color>
     <color name="brown">#362419</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="orange">#F06A33</color>
+    <color name="buttoncolor">#FC6A87</color>
+
 
 
 </resources>
